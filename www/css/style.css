@@ -1,0 +1,120 @@
+/* Empty. Add your own CSS if you like */
+
+body {
+  cursor: url('http://ionicframework.com/img/finger.png');
+}
+
+.star>.item-content {
+  background: linear-gradient(#E63C28, white) !important;
+}
+
+.background {
+  background: url(../img/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.branding {
+  width: 60%;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.branding img {
+  width: 100px;
+}
+
+.tagline {
+  font-size: 1.4rem;
+  font-family: "lobster";
+  color: rgb(196,46,45);
+}
+
+.branding p {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-family: "quicksand"
+}
+
+.bar-positive, .tabs-positive>.tabs {
+  background-color: #F0472F   !important;
+  border-color:  #417D9A;
+}
+
+.bar-balanced {
+  background-color: #28B62A !important;
+}
+
+.item-thumbnail-left img {
+  border-radius: 100px;
+  width: 60px !important;
+  height: 60px !important;
+}
+
+.item h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #A8344A;
+}
+
+.chef-pic {
+    border-radius: 100px !important;
+}
+
+.chef-name {
+    text-align: center;
+}
+
+.meal {
+    margin-bottom: 10px;
+}
+
+.meal-title {
+    padding-top: 20px;
+}
+
+.availability {
+    color: white;
+    text-align: center;
+    font-family: 'lobster two';
+    margin-top: -1.5px !important;
+}
+
+.booking-time {
+    font-family: 'wisdom-script';
+}
+
+.location {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.logo {
+    height: 27px;
+    margin-top: 8px;
+}
+
+.book-button {
+    border-radius: 30px;
+    background-color: #DA4460 !important;
+    border-style: none;
+    color: white;
+    font-weight: 500;
+}
+
+.close-button {
+    border-radius: 30px;
+    background-color: #F01D40 !important;
+    border-style: none;
+    color: white;
+    font-weight: 500;
+}
+
+.book-button:hover {
+    color: white !important;
+    background-color: #A8344A;
+}

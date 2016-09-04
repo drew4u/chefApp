@@ -1,0 +1,55 @@
+<!-- Chefs view - Main view -->
+
+<ion-view view title = '<img class="logo" src="img/chefLogo.png"/>'>
+
+    <!-- Chefs view search bar - Dynamically filters the list of chefs based on the search query -->
+    
+    <div class="bar bar-subheader 
+      item-input-inset">
+      <label class="item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" ng-model="query" placeholder=" hungry for...">
+      </label>
+    </div>
+    
+    <!-- Chefs view Content -->
+    
+    <ion-content class="has-subheader background">
+        
+        <!-- Chefs view - Pull to refresh data -->    
+
+        <ion-refresher on-refresh="doRefresh()">
+        </ion-refresher>
+
+        <!--Chefs view - Cards that display snapshot of chefs information - Uses ng-repeat to display the data -->
+
+        <ion-list>
+            <!-- Chefs view - Uses the 'filter: query' to allow search to filter the list based on search input-->
+            
+                <ion-item ng-class="{'star': item.star}" 
+                ng-repeat='item in chefs | filter: query' 
+                href="#/tab/chefs/{{item.shortname}}" class="card">
+                
+                    <div class="item item-avatar">
+                        <img ng-src="img/{{item.shortname}}_tn.jpg"
+                        alt="{{ item.name }} Photo">
+                        <h3>{{item.name}}</h2>
+                        <p>{{item.cuisine}}</h3>
+                    </div>
+                    
+                        <div class="col 33 item-image">
+                            <img class="full-image" ng-src="img/meals/meal_{{item.meal1}}.jpg"></img>
+                        </div>
+
+                    <a class="item item-icon-left assertive">
+                        <i class="icon ion-fork"></i>
+                        Menu
+                    </a>
+        
+            </div>
+    
+        </ion-list>
+    
+    </ion-content>
+
+</ion-view>

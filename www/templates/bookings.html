@@ -1,0 +1,59 @@
+<!-- Bookings view -->
+
+<ion-view view-title="Bookings">
+    
+    <!-- Bookings view - Nav buttons (Delete, reorder) -->
+    
+    <ion-nav-buttons side="secondary">
+        <button 
+          class="button button-icon ion-minus-circled"
+          ng-click="data.showDelete = !data.showDelete;">
+        </button>
+    </ion-nav-buttons>
+    
+    <!-- Bookings view - Displays current chefs you have booked -->
+    
+    <ion-content class="background">
+
+        <!-- Bookings View - Pull to refresh bookings view with original data-->
+        
+        <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+
+        <ion-list
+        show-delete="data.showDelete">
+            
+            <!-- Bookings View - Cards that display booked appointments -->
+            
+            <ion-item ng-class="{'star': item.star}" ng-repeat="item in bookings" class="card">
+
+                <!-- Bookings View - Card - Displays Chef Info -->
+                
+                <ion-item>
+                    <div class="booking-time">
+                    <h2>{{item.weekday}} {{item.appointment_time | date:'h:mm a'}}</h2>
+                </div>
+                </ion-item>
+                
+                <ion-item>
+                    <div class="item item-avatar">
+                        <img src="img/{{item.shortname}}_tn.jpg">
+                        <h3>{{item.name}}</h2>
+                        <h2>{{item.cuisine}}</h3>
+                    </div>
+                </ion-item>
+                
+                <ion-item>
+                    <div class="">
+                        <i>Special Requests</i>
+                        <p>{{item.specialrequest}}</p>
+                    </div>
+                </ion-item>
+                
+                <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete($index);">
+                </ion-delete-button>
+                
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+</ion-view>

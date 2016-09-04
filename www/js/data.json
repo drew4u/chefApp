@@ -1,0 +1,107 @@
+{
+  "chefs": [
+    {
+      "bio": "I specialize in Cuban cuisine, and likes things spicy!",
+      "shortname": "Roy_Garenti",
+      "meal1": "salmon",
+      "meal2": "taco",
+      "meal3": "lasagna",
+      "name": "Roy Garenti",
+      "cuisine": "Cuban",
+      "reviews": "Great chef, I loved the filet mignon He cooked for us. Truly spectacular service, for a great price. I would definitely recommend him.",
+      "availability": "Monday"
+    },{
+      "bio": "If your looking for a taste of the southwest, Im your man.",
+      "shortname": "Jonathan_Manning",
+      "meal1": "polenta",
+      "meal2": "taco",
+      "meal3": "ravioli",
+      "name": "Jonathan Manning",
+      "cuisine": "Tex Mex",
+      "reviews": "Absolutely fabulous burritos, all of our house guests were thoroughly satisfied. If your looking for some authentic South-western, youve found it.",
+      "availability": "Wednesday"
+    },{
+      "bio": "I love seafood. I specialize in Mahi Mahi dishes, and traditional seafood.",
+      "shortname": "Hillary_Genta",
+      "meal1": "salmon",
+      "meal2": "taco",
+      "meal3": "ravioli",
+      "name": "Hillary Genta",
+      "cuisine": "Seafood",
+      "reviews": "The Mahi Mahi was cooked to perfection, and the scallops were to die for. Her cooking remind me of sweet summer days dining by the seaside.",
+      "availability": "Wednesday"
+    },{
+      "bio": "I am an expert in everything exoctic. If you are wanting to step out of your comfort zone, book me.",
+      "shortname": "Hassan_Jobali",
+      "meal1": "lasagna",
+      "meal2": "taco",
+      "meal3": "lasagna",
+      "name": "Hassan Jobali",
+      "cuisine": "International",
+      "reviews": "Hassan can cook up just about anything you want. Truly a cross-continental cuisine.",
+      "availability": "Friday"
+    },{
+      "bio": "I love eastern cuisines, and make some mean noodles.",
+      "shortname": "Jennifer_Jaron",
+      "meal1": "salmon",
+      "meal2": "taco",
+      "meal3": "lasagna",
+      "name": "Jennifer Jaron",
+      "cuisine": "Japanese, Oriental",
+      "reviews": "Jennifer cooked us some amazing pad thai. Best date night in a long time. If only my husband could cook like Jennifer.",
+      "availability": "Saturday"
+    },{
+      "bio": "I have been a practicing sushi chef for 25 years. I know how to 'roll'.",
+      "shortname": "Kelly_McSushi",
+      "meal1": "salmon",
+      "meal2": "taco",
+      "meal3": "lasagna",
+      "name": "Kelly McSushi",
+      "cuisine": "Sushi",
+      "reviews": "We loved Kellys Dragon roll. It lit my mouth on fire with delight!",
+      "availability": "Thursday"
+    },{
+      "bio": "I love to eat and cook all things middle eastern.",
+      "shortname": "Olivia_Smith",
+      "meal1": "salmon",
+      "meal2": "taco",
+      "meal3": "lasagna",
+      "name": "Olivia Smith",
+      "cuisine": "Mediterranean",
+      "reviews": "If your looking for Greek, Lebanese, or any other dish from the region, she can make it. She is a very friendly and gracious cook, and we highly recommend her.",
+      "availability": "Tuesday"
+    },{
+      "bio": "Mama Mia!",
+      "shortname": "Jerry_Italiano",
+      "meal1": "salmon",
+      "meal2": "taco",
+      "meal3": "lasagna",
+      "name": "Jerry Italiano",
+      "cuisine": "Italian",
+      "availability": "Wednesday",
+      "reviews": "Excellent and authentic Italian cooking. Hes pretty hilarious too!"
+    },{
+      "bio": "Im Paula Deen and I am not a racist.",
+      "shortname": "Paula_Deen",
+      "meal1": "salmon",
+      "meal2": "taco",
+      "meal3": "lasagna",
+      "name": "Paula Deen",
+      "cuisine": "Southern",
+      "reviews": "She was pretty racist.",
+      "availability": "Monday"
+    }
+  ],
+    
+  "profile": [
+    {
+      "name": "Andrew Sibert",
+      "shortname": "Andrew_Sibert",
+      "city": "Savannah",
+      "state": "GA",
+      "address": "420 Awesome street",
+      "zipcode": "31401",
+      "phonenumber": "919-986-0809"
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+<!-- Detail view Header -->
+
+<ion-header-bar class="bar-positive">
+  <h2 class="title">Chef Info</h2>
+</ion-header-bar>
+
+<!-- Detail view Content -->
+
+<ion-view view-title="Details">
+    
+    <ion-header-bar class="bar-positive">
+        <h2 class="title">Chef Info</h2>
+    </ion-header-bar>
+    
+    <ion-content>
+        <ion-list>
+            
+            <!-- Detail view - Chef Details -->
+            
+            <!-- Filters according to the variable whichchef (which card was selected) -->
+            <ion-item class="item-text-wrap"
+            ng-repeat="item in chefs | filter: { shortname: whichchef }" >
+
+                <!-- Detail view - Chef Information -->
+                
+                <ion-item>
+                    <div class="row">
+                        <div class="col-50 col-offset-25">
+                            <img class="full-image chef-pic" ng-src="img/{{item.shortname}}_tn.jpg"
+                            alt="{{ item.name }} Photo">
+                        </div>
+                    </div>
+                </ion-item>
+                    
+                <ion-item class="chef-name">
+                    <h3 class="chef-cuisine">{{ item.name }}</h2>
+                </ion-item>
+                
+                <ion-item>
+                    <div class="row">
+                            <div>
+                                <p>{{ item.bio }}</p>
+                            </div>
+                    </div>
+                </ion-item>
+                
+                <!-- Detail view - Displays chefs availability-->
+
+                <ion-item class="bar bar-header bar-balanced">
+                    <h2 class="availability">Available&nbsp;&nbsp;{{item.availability | date: "HH:mm:ss"}}</h2> 
+                </ion-item>
+                
+                <ion-item class="item item-text-wrap">
+                    <h3 class="">Reviews</h2>
+                    <p>{{ item.reviews }}</p>
+                </ion-item>
+
+                <a class="item item-icon-left assertive">
+                    <i class="icon ion-fork"></i>
+                    Menu
+                </a>
+                
+                <!-- Displays meal items -->
+
+                <ion-item class="item item-image">
+                        <img class="" ng-src="img/meals/meal_{{item.meal1}}.jpg"></img>
+                        <h3 class="icon ion-leaf meal-title">&nbsp;Salmon A La Carte</h3>
+                        <p> Seared Salmon with polenta, feta cheese, and asparagus with a side of quinoa.</p>
+                </ion-item>
+                <ion-item class="item item-image">
+                        <img class="" ng-src="img/meals/meal_{{item.meal2}}.jpg"></img>
+                        <h3 class="icon ion-ios-flame meal-title">&nbsp;Mexican Street Tacos</h3>
+                        <p> Roasted pork, lettuce, spinach, tomato, salsa verde, and sour cream.</p>
+                </ion-item>
+                <ion-item class="item item-image">
+                        <img class="" ng-src="img/meals/meal_{{item.meal3}}.jpg">
+                        </img>
+                        <h3 class="meal-title">&nbsp;Lasagna and Ravioli</h3>
+                        <p> Traditional lasagna and ravioli, italian style.</p>
+                </ion-item>
+
+                <i class="button button-block book-button" ng-click="openModal(item)">Book Now</i>
+
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+<!-- Booking Modal View -->
+
+    <script id="my-modal.html" type="text/ng-template">
+        <div class="modal" ng-controller="BookModalController">
+
+            <ion-header-bar class="bar-positive">
+                <i class="button close-button ion-close-round" ng-click="modal.hide();"></i>
+                <h1 class="title">Book {{booking_chefInfo.name}}</h1>
+            </ion-header-bar>
+
+            <ion-content>
+                <ion-list class="card">
+
+                    <ion-item class="item item-header">
+                        <div class="item item-avatar">
+                            <img src="img/{{booking_chefInfo.shortname}}_tn.jpg">
+                            <h2>{{booking_chefInfo.name}}</h2>
+                            <h3>{{booking_chefInfo.cuisine}}</h3>
+                        </div>
+                    </ion-item>
+                    
+                    <ion-item class="bar bar-header bar-balanced">
+                        <div>
+                            <h2 class="availability">What time would you like to book {{booking_chefInfo.name}}?</h2>
+                        </div>
+                    </ion-item>
+                    
+                    <ion-item>
+                        <div>
+                            <img style="width: 100%;" src="img/meals/meal_salmon.jpg"></img>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="row">
+                        <div class="item item-icon-left col-50 balanced">
+                            <i class="icon ion-clock"></i>
+                            {{booking_chefInfo.availability}}
+                        </div>
+                        <div class="item item-input col col-50">
+                            <label class="item item-input">
+                                <input type="time" name="time" ng-model="booking.time">
+                            </label>
+                        </div>
+                    </ion-item>
+
+                    <ion-item> 
+                        <div class="row">
+                            <label class="item item-input col">
+                                <textarea placeholder="Any special requests?" ng-model="booking.specialrequests"></textarea>
+                            </label> 
+                        </div>
+                        <i class="button button-block book-button" ng-click="closeAfterSave();">Book</i>
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+
+        </div>
+    </script>
+
+</ion-view>
